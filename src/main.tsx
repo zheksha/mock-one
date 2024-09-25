@@ -7,7 +7,6 @@ import store from './redux/store'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Error404 from './apps/ErrorBoundary/Error404'
 
-// TODO #6 Add routes for different app
 const router = createBrowserRouter([
   {
     path: '/',
