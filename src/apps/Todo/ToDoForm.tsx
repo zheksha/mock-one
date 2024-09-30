@@ -1,14 +1,14 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 function ToDoForm({ addTodo }) {
-  const [value, setValue] = useState('')
+  const [value, setValue] = useState<string>("");
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!value) return
-    addTodo(value)
-    setValue('')
-  }
+    e.preventDefault();
+    if (!value) return;
+    addTodo(value);
+    setValue("");
+  };
 
   return (
     <form onSubmit={handleSubmit} className="my-4">
@@ -25,7 +25,7 @@ function ToDoForm({ addTodo }) {
         Add Task
       </button>
     </form>
-  )
+  );
 }
 
-export default ToDoForm
+export default ToDoForm;
