@@ -1,5 +1,5 @@
-import Counter from './apps/Counter/Counter'
-import Todo from './apps/Todo/Todo'
+import Counter from "./apps/Counter/Counter";
+import Todo from "./apps/Todo/Todo";
 
 function App() {
   return (
@@ -7,10 +7,9 @@ function App() {
       <h4 className="text-center mt-4">
         Hello Dear Geek! Please read README.MD file for the instructions.
       </h4>
-      <Todo />
       <Counter />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

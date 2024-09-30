@@ -1,10 +1,14 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { increment, incrementByAmount } from '../../redux/counterSlice'
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+} from "../../redux/counterSlice";
 
 function Counter() {
-  const count = useSelector((state) => state.counter.value)
-  const dispatch = useDispatch()
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
   return (
     <div className="container text-center mt-5">
@@ -16,7 +20,10 @@ function Counter() {
       >
         Increment
       </button>
-      <button className="btn btn-danger mx-2" onClick={() => {}}>
+      <button
+        className="btn btn-danger mx-2"
+        onClick={() => dispatch(decrement())}
+      >
         Decrement
       </button>
       <button
@@ -26,7 +33,7 @@ function Counter() {
         Increment by 5
       </button>
     </div>
-  )
+  );
 }
 
-export default Counter
+export default Counter;
